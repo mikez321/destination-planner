@@ -51,6 +51,21 @@ class Weather
     end
   end
 
+  def json_hash
+    info = { response: @weather_info[:cod],
+             data:
+             {
+               cityName: @weather_info[:name],
+               weather: @weather_info[:weather],
+               main: @weather_info[:main],
+               wind: @weather_info[:wind],
+               rain: @weather_info[:rain],
+               image: image
+             }
+            }
+    info.to_json
+  end
+
   private
 
   def get_weather(destination)
