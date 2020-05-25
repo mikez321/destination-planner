@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "destination API" do
-  it 'can update destinations' do
+  it 'can edit destinations' do
     create_list(:destination, 4)
     tlh = Destination.create(name: 'Tallahassee',
                              zip: '32317',
@@ -17,7 +17,7 @@ describe "destination API" do
     expect(response).to be_successful
 
     json = JSON.parse(response.body, symbolize_names: true)
-    
+
     expect(json).to be_an(Hash)
     expect(json[:name]).to eq("Tallahassee")
     expect(json[:description]).to eq("Swimmin' Pools, Huntin', Trucks")

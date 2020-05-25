@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "destination API" do
-  it 'can see all destinations' do
+  it 'can see a single destination' do
     create_list(:destination, 4)
     tlh = Destination.create(name: 'Tallahassee',
                              zip: '32317',

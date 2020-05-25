@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "destination API" do
-  it 'can see all destinations' do
+  it 'can create destinations' do
     create_list(:destination, 4)
 
     expect(Destination.all.length).to eq(4)
