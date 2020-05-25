@@ -20,6 +20,7 @@
   <div class="weather">
     <h4>Forecast for <%= @destination.name %>:</h4>
       <p class="date">Date: <%= @destination.weather.date %></p>
+      <p class="weather-image"><%= image_tag(@destination.weather.image) %></p>
       <p class="current">Currrent Temp: <%= @destination.weather.current %></p>
       <p class="high">High: <%= @destination.weather.high %></p>
       <p class="low">Low: <%= @destination.weather.low %></p>
