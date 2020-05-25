@@ -38,6 +38,10 @@ class Weather
     'unavailable'
   end
 
+  def image
+    'https://ctl.s6img.com/society6/img/E54QZiyFd-Fu7kFpNdgXFnKycJc/w_700/prints/~artwork/s6-original-art-uploads/society6/uploads/misc/eb37338848f64aefb6b83b59757c2457/~~/good-morning-sunshine1225559-prints.jpg'
+  end
+
   def get_weather(destination)
     WeatherService.new.current_weather(destination)
   end
