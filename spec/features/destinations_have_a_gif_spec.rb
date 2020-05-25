@@ -21,6 +21,7 @@ describe "visiting a destinations show page" do
 
     within ".weather" do
       expect(page).to have_css(".weather-image")
+      expect(page).to_not have_content('unavailable')
     end
   end
 end
