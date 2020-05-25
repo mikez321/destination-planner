@@ -26,6 +26,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'faker'
   gem 'capybara'
+  gem 'launchy'
   gem 'shoulda-matchers'
 end
 
