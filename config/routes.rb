@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      namespace :destinations do
+        get '/:id/weather', to: 'weather#show'
+      end
+
       resources :destinations
     end
   end
