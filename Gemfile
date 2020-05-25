@@ -19,6 +19,7 @@ gem 'jquery-rails'
 gem 'pry'
 gem 'figaro'
 gem 'faraday'
+gem 'fast_jsonapi'
 
 
 group :development, :test do
