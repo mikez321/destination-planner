@@ -19,7 +19,13 @@ describe "it knows the weather" do
     expect(page).to have_content tlh.zip
     expect(page).to have_content tlh.description
 
-    expect(page).to have_css(".weather")
+    within ".weather" do
+      expect(page).to have_css(".date")
+      expect(page).to have_css(".current")
+      expect(page).to have_css(".high")
+      expect(page).to have_css(".low")
+      expect(page).to have_css(".summary")
+    end
 
   end
 end
